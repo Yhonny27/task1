@@ -5,7 +5,7 @@ resource "google_service_account" "store_user" {
 }
 resource "google_project_iam_binding" "store_usera" {
   project            = "projectx-344700"
-  role               = "roles/pubsub.admin"
+  role               = "roles/pubsub.editor"
 
   members = [
     "serviceAccount:${google_service_account.store_user.email}",
