@@ -1,7 +1,7 @@
 demotask1
 Deploy infrastructure to GCP using Terraform
 
-This Terraform file deploys an instance in GCP to run a cronjob script and pull messages to the PubSub tool ebery 5 minutes.
+This Terraform file deploys an instance in GCP to run a cronjob script and pull messages to the PubSub tool every 5 minutes.
 
 Requirements You must have Terraform installed on your computer. You must have a Google Cloud Platform (GCP) account. You must have downloaded a Google Cloud Platform credentials file. You must have enabled the Google Compute Engine API. It uses the Terraform Google Cloud Provider that interacts with the many resources supported by Google Cloud Platform (GCP) through its APIs.
 
