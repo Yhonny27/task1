@@ -11,7 +11,7 @@ until [ $a -lt $b ]; do
 gcloud pubsub subscriptions pull subscription_task1 --format=json
         for pubsub in $(gcloud pubsub subscriptions pull subscription_task1 --format=json)
         do
-        touch $filename.json && echo $pubsub >> $filename.json
+        sudo touch $filename.json && echo $pubsub >> $filename.json
         mv $filename.json /
         done
 gsutil cp /$filename.json gs://bucket22_task1/
