@@ -3,7 +3,7 @@ a=100
 b=0
 frequency1=60
 frequency2=300
-filename=cronjob
+filename=message
 
 #Recuperar/Obtener mensaje del Topic (enviado por el Cloud Scheduler)
 sleep $frequency1;
