@@ -19,14 +19,6 @@ resource "google_project_iam_binding" "store_userb" {
     "serviceAccount:${google_service_account.store_user.email}",
   ]
 }
-#resource "google_project_iam_binding" "store_userc" {
-#  project            = "projectx-344700"
-#  role               = "roles/cloudscheduler.admin"
-
-#  members = [
-#    "serviceAccount:${google_service_account.store_user.email}",
-# ]
-#}
 #Create Cloud Storage and Bucket to save the json file
 resource "google_storage_bucket" "bucket22_task1" {
   name          = "bucket22_task1"
