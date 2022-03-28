@@ -13,7 +13,7 @@ resource "google_project_iam_binding" "store_usera" {
 }
 resource "google_project_iam_binding" "store_userb" {
   project            = "projectx-344700"
-  role               = "roles/storage.objectAdmin"
+  role               = "roles/storage.objectCreator"
 
   members = [
     "serviceAccount:${google_service_account.store_user.email}",
