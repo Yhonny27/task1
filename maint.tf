@@ -19,21 +19,14 @@ resource "google_project_iam_binding" "store_userb" {
     "serviceAccount:${google_service_account.store_user.email}",
   ]
 }
-resource "google_project_iam_binding" "store_userc" {
-  project            = "projectx-344700"
-  role               = "roles/cloudscheduler.admin"
+#resource "google_project_iam_binding" "store_userc" {
+#  project            = "projectx-344700"
+#  role               = "roles/cloudscheduler.admin"
 
-  members = [
-    "serviceAccount:${google_service_account.store_user.email}",
- ]
-}
-resource "google_project_iam_binding" "store_userd" {
-  project            = "projectx-344700"
-  role               = "roles/gkehub.admin"
-  members = [
-    "serviceAccount:${google_service_account.store_user.email}",
-  ]
-}
+#  members = [
+#    "serviceAccount:${google_service_account.store_user.email}",
+# ]
+#}
 #Create Cloud Storage and Bucket to save the json file
 resource "google_storage_bucket" "bucket22_task1" {
   name          = "bucket22_task1"
@@ -64,7 +57,7 @@ resource "google_pubsub_subscription" "subscription_task1" {
   topic = google_pubsub_topic.topic_task1.name
 
   labels = {
-    foo = "bar"
+    name = "task1"
   }
   # 20 minutes
   message_retention_duration = "1200s"
