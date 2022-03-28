@@ -1,5 +1,5 @@
 #!/bin/bash
-a=100
+a=1
 b=0
 frequency1=60
 frequency2=300
@@ -16,5 +16,4 @@ gcloud pubsub subscriptions pull subscription_task1 --format=json
         done
 gsutil cp /$filename.json gs://bucket22_task1/
 sleep  $frequency2;
-let  b=$b+1
 done
